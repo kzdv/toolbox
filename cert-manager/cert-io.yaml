@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kzdv-io
+  namespace: hello
+spec:
+  secretName: kzdv-io-tls
+  issuerRef:
+    name: letsencrypt
+  dnsNames:
+  - kzdv.io
+  - '*.kzdv.io'

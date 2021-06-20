@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: denartcc-org
+  namespace: prod
+spec:
+  secretName: denartcc-org-tls
+  issuerRef:
+    name: letsencrypt-zdv
+    kind: ClusterIssuer
+  dnsNames:
+  - denartcc.org
+  - '*.denartcc.org'
